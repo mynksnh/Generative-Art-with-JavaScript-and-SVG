@@ -71,3 +71,14 @@ for (let i = 0; i < numCurves; i += 1) {
 }
 
 curves.moveTo(500, 500);
+
+
+// The syntax of the createCurve() method.
+createCurve(pointsArray, [curveFactor]);
+// A one-dimensional array of points.
+let points1D = [25, 30, 45, 20, 80, 10, 90, 40];
+// A two-dimensional array of the same points.
+let points2D = [
+  [25, 30], [45, 20], [80, 10], [90, 40]
+];
+// The curveFactor argument allows us to modify the tension between the points. At a value of 0, the points are connected by a straight line. At a value of 1 (the default), the tension is looser and the curve much smoother. In general, the most usable results lie in the range of 0 to 2; s

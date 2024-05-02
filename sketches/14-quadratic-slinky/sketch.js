@@ -45,3 +45,14 @@ for (let i = 0; i < 500; i += 5) {
 }
 
 slinky.moveTo(500, 500);
+
+
+svg.create('path').set({
+    d: 'M 50,150 Q 150,350 250,150 T 450,150 650,150 850,150 1050,150'
+  });
+
+  // Syntax for the A/a command.
+  // The first two arguments and the last two arguments aren’t anything we haven’t encountered before: rx and ry refer to the radii of the x and y axes, and the final x and y arguments define the curve’s destination point. The rotation defines the angle of rotation along the x axis
+// 'A [rx ry rotation large-arc-flag sweep-flag x y] ...'
+// 'a [rx ry rotation large-arc-flag sweep-flag dx dy] ...'
+// What’s really happening when we draw an elliptical arc curve is that two interlocking ellipses are used as guides behind the scenes to determine which of the many possible paths are actually drawn. With the large-arc-flag set to 1, a large arc will be chosen. And with the sweep-flag set to 1, the arc will be drawn in a clockwise direction. 

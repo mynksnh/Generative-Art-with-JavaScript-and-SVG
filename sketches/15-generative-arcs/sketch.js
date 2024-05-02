@@ -47,3 +47,13 @@ for (let i = 0; i < 360; i += 1) {
 
 // Apply a random rotation.
 arcs.rotate(Gen.random(0, 360));
+
+svg.create('path').set({
+  d: 'M 75,75 C 140,330 360,330 425,75'
+});
+
+// The S command automatically generates a symmetric control point that mirrors the control point of the preceding curve and as a result allows us to omit the first set of control point coordinates
+// Extending a cubic bezier curve with the S command.
+svg.create('path').set({
+  d: 'M 50,150 C 100,250 200,50 250,150 S 400,50 450,150'
+});
